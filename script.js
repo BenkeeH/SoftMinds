@@ -1,12 +1,8 @@
-document.addEventListener('DOMContentLoaded', function(){
-  const btn = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('.nav-links');
+const faqs = document.querySelectorAll('.faq-question');
 
+faqs.forEach(btn => {
   btn.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
-
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => menu.classList.remove('open'));
+    const faq = btn.parentElement;
+    faq.classList.toggle('open');
   });
 });
